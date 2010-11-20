@@ -41,8 +41,8 @@ class OSMTagInfo {
 			$value = '';
 		}
 
-		$height = '100';
-		$width = '100';
+		$height = '200';
+		$width = '200';
 
 		$error = '';
 
@@ -76,8 +76,8 @@ class OSMTagInfo {
 			// (See http://www.mediawiki.org/wiki/Manual:Tag_extensions#How_can_I_avoid_modification_of_my_extension.27s_HTML_output.3F)
 
 			$output  = '<!-- osm taginfo -->';
-			$output .= '<iframe frameborder="0" width="'.$width.'" height="'.$height.' src="http://taginfo.openstreetmap.de/tags/?key='.urlencode($key).'&value='.urlencode($value).'">'."\n";
-			$output .- '<p>Your browser does not support iframes.</p>';
+			$output .= '<iframe frameborder="0" width="'.$width.'" src="http://taginfo.openstreetmap.de/tags/?key='.urlencode($key).'&value='.urlencode($value).'">';
+			//$output .= '<p>Your browser does not support iframes.</p>';
 			$output .= '</iframe>'."\n";
 		}
 		return $output;
