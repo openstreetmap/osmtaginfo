@@ -50,7 +50,6 @@ class OSMTagInfo {
 			
 			// Check required parameters values are provided
 			if ( $key == ''  ) $error .= wfMsg( 'osmtaginfo_keymissing' ) . '<br>';
-			if ( $value == ''  ) $error .= wfMsg( 'osmtaginfo_valuemissing' ) . '<br>';
 			
 			// no errors so far. Now check the values
 			/*
