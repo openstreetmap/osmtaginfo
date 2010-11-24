@@ -51,7 +51,6 @@ class OSMTagInfo {
 			// Check required parameters values are provided
 			if ( $key == ''  ) $error .= wfMsg( 'osmtaginfo_keymissing' ) . '<br>';
 			if ( $value == ''  ) $error .= wfMsg( 'osmtaginfo_valuemissing' ) . '<br>';
-
 			
 			// no errors so far. Now check the values
 			/*
@@ -76,7 +75,11 @@ class OSMTagInfo {
 			// (See http://www.mediawiki.org/wiki/Manual:Tag_extensions#How_can_I_avoid_modification_of_my_extension.27s_HTML_output.3F)
 
 			$output  = '<!-- osm taginfo -->';
-			$output .= '<iframe frameborder="0" width="'.$width.'" src="http://taginfo.openstreetmap.de/tags/?key='.urlencode($key).'&value='.urlencode($value).'">';
+			if ( !empty($value) ) {
+				$output .= '<iframe frameborder="0" width="'.$width.'" src="http://taginfo.openstreetmap.de/embed/tag?key='.urlencode($key).'&value='.urlencode($value).'">';
+			} else {
+				$output .= '<iframe frameborder="0" width="'.$width.'" src="http://taginfo.openstreetmap.de/embed/key?key='.urlencode($key).'">';
+			}
 			//$output .= '<p>Your browser does not support iframes.</p>';
 			$output .= '</iframe>'."\n";
 		}
