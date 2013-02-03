@@ -47,7 +47,7 @@ class OSMTagInfo {
 		}
 
 		$height = '250';
-		$width = '200';
+		$width = '220';
 
 		$error = '';
 
@@ -80,7 +80,7 @@ class OSMTagInfo {
 
 			$output  = '<!-- osm taginfo -->';
 			if ( !empty($rtype) ) {
-				$output .= '<iframe frameborder="0" width="'.$width.'" height="100" src="http://taginfo.openstreetmap.org/embed/relation?rtype='.urlencode($rtype).'">';
+				$output .= '<iframe frameborder="0" width="'.$width.'" height="160" src="http://taginfo.openstreetmap.org/embed/relation?rtype='.urlencode($rtype).'">';
 			} elseif ( !empty($value) ) {
 				$output .= '<iframe frameborder="0" width="'.$width.'" height="100" src="http://taginfo.openstreetmap.org/embed/tag?key='.urlencode($key).'&value='.urlencode($value).'">';
 			} else {
