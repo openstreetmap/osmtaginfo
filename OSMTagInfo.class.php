@@ -40,6 +40,11 @@ class OSMTagInfo {
 		} else {
 			$value = '';
 		}
+		if ( isset( $argv['rtype'] ) ) {
+			$rtype = $argv['rtype'];
+		} else {
+			$rtype = '';
+		}
 
 		$height = '200';
 		$width = '200';
@@ -49,7 +54,7 @@ class OSMTagInfo {
 		if ( $error == '' ) {
 			
 			// Check required parameters values are provided
-			if ( $key == ''  ) $error .= wfMsg( 'osmtaginfo_keymissing' ) . '<br>';
+			if ( $key == '' AND $rtype == '' ) $error .= wfMsg( 'osmtaginfo_keymissing' ) . '<br>';
 			
 			// no errors so far. Now check the values
 			/*
@@ -74,7 +79,9 @@ class OSMTagInfo {
 			// (See http://www.mediawiki.org/wiki/Manual:Tag_extensions#How_can_I_avoid_modification_of_my_extension.27s_HTML_output.3F)
 
 			$output  = '<!-- osm taginfo -->';
-			if ( !empty($value) ) {
+			if ( !empty($rtype) ) {
+				$output .= '<iframe frameborder="0" width="'.$width.'" height="100" src="http://taginfo.openstreetmap.org/embed/relation?rtype='.urlencode($rtype).'">';
+			} elseif ( !empty($value) ) {
 				$output .= '<iframe frameborder="0" width="'.$width.'" height="100" src="http://taginfo.openstreetmap.org/embed/tag?key='.urlencode($key).'&value='.urlencode($value).'">';
 			} else {
 				$output .= '<iframe frameborder="0" width="'.$width.'" height="100" src="http://taginfo.openstreetmap.org/embed/key?key='.urlencode($key).'">';
