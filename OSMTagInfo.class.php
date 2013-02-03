@@ -46,7 +46,7 @@ class OSMTagInfo {
 			$rtype = '';
 		}
 
-		$height = '200';
+		$height = '250';
 		$width = '200';
 
 		$error = '';
