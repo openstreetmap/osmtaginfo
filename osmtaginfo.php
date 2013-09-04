@@ -33,8 +33,8 @@ if( defined( 'MEDIAWIKI' ) ) {
 		'descriptionmsg' => 'osmtaginfo_desc',
 	);
 
-	$wgAutoloadClasses['OSMTagInfo'] = dirname( __FILE__ ) . '/OSMTagInfo.class.php';
-	$wgExtensionMessagesFiles['OSMTagInfo'] = dirname( __FILE__ ) . '/OSMTagInfo.i18n.php';
+	$wgAutoloadClasses['OSMTagInfo'] = dirname( __FILE__ ) . '/osmtaginfo.class.php';
+	$wgExtensionMessagesFiles['OSMTagInfo'] = dirname( __FILE__ ) . '/osmtaginfo.i18n.php';
 
 	function wfosmtaginfo() {
 		global $wgParser;
