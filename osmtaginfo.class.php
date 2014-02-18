@@ -80,11 +80,11 @@ class OSMTagInfo {
 
 			$output  = '<!-- osm taginfo -->';
 			if ( !empty($rtype) ) {
-				$output .= '<iframe frameborder="0" width="'.$width.'" height="160" src="http://taginfo.openstreetmap.org/embed/relation?rtype='.urlencode($rtype).'">';
+				$output .= '<iframe frameborder="0" width="'.$width.'" height="160" src="//taginfo.openstreetmap.org/embed/relation?rtype='.urlencode($rtype).'">';
 			} elseif ( !empty($value) ) {
-				$output .= '<iframe frameborder="0" width="'.$width.'" height="100" src="http://taginfo.openstreetmap.org/embed/tag?key='.urlencode($key).'&value='.urlencode($value).'">';
+				$output .= '<iframe frameborder="0" width="'.$width.'" height="100" src="//taginfo.openstreetmap.org/embed/tag?key='.urlencode($key).'&value='.urlencode($value).'">';
 			} else {
-				$output .= '<iframe frameborder="0" width="'.$width.'" height="100" src="http://taginfo.openstreetmap.org/embed/key?key='.urlencode($key).'">';
+				$output .= '<iframe frameborder="0" width="'.$width.'" height="100" src="//taginfo.openstreetmap.org/embed/key?key='.urlencode($key).'">';
 			}
 			//$output .= '<p>Your browser does not support iframes.</p>';
 			$output .= '</iframe>'."\n";
