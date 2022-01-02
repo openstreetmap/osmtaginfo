@@ -1,0 +1,21 @@
+{
+        "name": "OpenStreetMap OSMTagInfo",
+        "author": "Grant Slater",
+        "url": "http://wiki.openstreetmap.org/wiki/TagInfo",
+        "description": "OSMTagInfo blah blah blah",
+        "descriptionmsg": "osmtaginfo_desc",
+        "type": "parserhook",
+        "requires": {
+                "MediaWiki": ">= 1.35.0"
+        },
+        "AutoloadClasses": {
+                "OSMTagInfo": "osmtabinfo.class.php"
+        },
+        "ExtensionMessagesFiles": {
+                "OSMTagInfo": "osmtaginfo.i18n.php"
+        }
+        "Hooks": {
+                "ParserFirstCallInit": "OSMTagInfo::onParserFirstCallInit"
+        },
+        "manifest_version": 2
+}
