@@ -13,7 +13,7 @@
         },
         "ExtensionMessagesFiles": {
                 "OSMTagInfo": "osmtaginfo.i18n.php"
-        }
+        },
         "Hooks": {
                 "ParserFirstCallInit": "OSMTagInfo::onParserFirstCallInit"
         },
