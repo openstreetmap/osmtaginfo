@@ -37,8 +37,6 @@ class OSMTagInfo {
 	static function parse( $input, $argv ) {
 		global $wgScriptPath;
 
-		wfLoadExtensionMessages( 'OSMTagInfo' );
-
 		if ( isset( $argv['key'] ) ) {
 			$key = $argv['key'];
 		} else {
