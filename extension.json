@@ -9,7 +9,7 @@
                 "MediaWiki": ">= 1.35.0"
         },
         "AutoloadClasses": {
-                "OSMTagInfo": "osmtabinfo.class.php"
+                "OSMTagInfo": "osmtaginfo.class.php"
         },
         "ExtensionMessagesFiles": {
                 "OSMTagInfo": "osmtaginfo.i18n.php"
