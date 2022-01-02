@@ -36,14 +36,4 @@ if( defined( 'MEDIAWIKI' ) ) {
 	$wgAutoloadClasses['OSMTagInfo'] = dirname( __FILE__ ) . '/osmtaginfo.class.php';
 	$wgExtensionMessagesFiles['OSMTagInfo'] = dirname( __FILE__ ) . '/osmtaginfo.i18n.php';
 
-	function wfosmtaginfo() {
-		global $wgParser;
-		# register the extension with the WikiText parser
-		# the first parameter is the name of the new tag.
-		# In this case it defines the tag <osmtaginfo>
-		# the second parameter is the callback function for
-		# processing the text between the tags
-		$wgParser->setHook( 'osmtaginfo', array( 'OSMTagInfo', 'parse' ) );
-	}
-
 }
