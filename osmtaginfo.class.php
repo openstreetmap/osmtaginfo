@@ -24,6 +24,15 @@
 
 class OSMTagInfo {
 
+	# register the extension with the WikiText parser
+	# the first parameter is the name of the new tag.
+	# In this case it defines the tag <osmtaginfo>
+	# the second parameter is the callback function for
+	# processing the text between the tags
+	public static function onParserFirstCallInit( Parser $parser ) {
+		$parser->setHook( 'osmtaginfo', [ self::class, 'parse' ] );
+	}
+
 	# The callback function for converting the input text to HTML output
 	static function parse( $input, $argv ) {
 		global $wgScriptPath;
