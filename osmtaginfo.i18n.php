@@ -34,5 +34,7 @@ $messages['en'] = array(
  */
 $messages['qqq'] = array(
 	'osmtaginfo_desc' => 'Short description of the Slippymap extension, shown in [[Special:Version]]. Do not translate or change links.',
+	'osmtaginfo_keymissing' => 'key or rtype needs to be set.',
+	'osmtaginfo_maperror' => 'osmtaginfo error:',
 );
 
