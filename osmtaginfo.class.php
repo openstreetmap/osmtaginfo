@@ -61,14 +61,14 @@ class OSMTagInfo {
 		if ( $error == '' ) {
 			
 			// Check required parameters values are provided
-			if ( $key == '' AND $rtype == '' ) $error .= wfMsg( 'osmtaginfo_keymissing' ) . '<br>';
+			if ( $key == '' AND $rtype == '' ) $error .= wfMessage( 'osmtaginfo_keymissing' ) . '<br>';
 			
 			// no errors so far. Now check the values
 			/*
 			if ( !is_numeric( $width ) ) {
-				$error = wfMsg( 'osmtaginfo_widthnan', $width ) . '<br>';
+				$error = wfMessage( 'osmtaginfo_widthnan', $width ) . '<br>';
 			} else if ( !is_numeric( $height ) ) {
-				$error = wfMsg( 'osmtaginfo_heightnan', $height ) . '<br>';
+				$error = wfMessage( 'osmtaginfo_heightnan', $height ) . '<br>';
 			}
 			*/
 		}
@@ -76,7 +76,7 @@ class OSMTagInfo {
 		if ( $error != "" ) {
 			// Something was wrong. Spew the error message and input text.
 			$output  = '';
-			$output .= "<span class=\"error\">" . wfMsg( 'osmtaginfo_maperror' ) . ' ' . $error . "</span><br />";
+			$output .= "<span class=\"error\">" . wfMessage( 'osmtaginfo_maperror' ) . ' ' . $error . "</span><br />";
 			$output .= htmlspecialchars( $input );
 		} else {
 			// HTML output for the slippy map.
