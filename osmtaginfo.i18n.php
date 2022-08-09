@@ -26,17 +26,16 @@
 $messages = array();
 
 $messages['en'] = array(
-	'osmtaginfo_desc' => "OSM Tag Info blah blah"
-);
-
-/** Message documentation (Message documentation)
- * @author Purodha
- */
-$messages['qqq'] = array(
-	'osmtaginfo_desc' => 'Short description of the Slippymap extension, shown in [[Special:Version]]. Do not translate or change links.',
+	'osmtaginfo_desc' => "OSM Tag Info blah blah",
 	'osmtaginfo_keymissing' => 'key or rtype needs to be set.',
 	'osmtaginfo_maperror' => 'osmtaginfo error:',
 	'osmtaginfo_widthnan' => 'width is not a number',
 	'osmtaginfo_heightnan' => 'height is not a number',
+);
+
+/** Message documentation (Message documentation)
+ */
+$messages['qqq'] = array(
+	'osmtaginfo_desc' => 'Short description of the OpenStreetMap OSMTagInfo extension, shown in [[Special:Version]]. Do not translate or change links.',
 );
 
